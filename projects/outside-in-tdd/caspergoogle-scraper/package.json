@@ -1,0 +1,16 @@
+{
+  "name": "caspergoogle-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "caspergoogle.js",
+  "scripts": {
+    "start": "node caspergoogle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mojib Mohammad",
+  "license": "ISC",
+  "dependencies": {
+    "casperjs": "^1.1.4",
+    "phantomjs": "^2.1.7"
+  }
+}

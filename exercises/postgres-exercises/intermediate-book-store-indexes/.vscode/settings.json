@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "intermediate_book_store",
+            "database": "intermediatebookstoreindexes",
+            "username": "mojib2014",
+            "password": ""
+        }
+    ]
+}

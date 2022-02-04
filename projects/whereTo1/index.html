@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhereTo</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <h1 class="header-title">Where To</h1>
+      <div class="logo"><i class="fa fa-plane-departure"></i></div>
+    </header>
+    <!-- Main content wrapper -->
+    <main id="main-wrapper">
+      <!-- Alerts Container -->
+      <div class="alert"></div>
+      <!-- User input form -->
+      <form id="weather-form">
+        <div class="form-group">
+          <input
+            type="text"
+            name="city"
+            id="city"
+            placeholder="Search for a city/country name..."
+          />
+        </div>
+        <div class="submit">
+          <input id="submit" type="submit" value="Submit" />
+        </div>
+      </form>
+      <!-- Wheather -->
+      <section id="weather" class="weather-section">
+        <div class="city-name"></div>
+        <div class="weather-div"></div>
+      </section>
+      <!-- Venues -->
+      <section id="venues" class="venues-section">
+        <h2 class="venues-section-title">Top Attractions</h2>
+        <div class="venues-div"></div>
+      </section>
+    </main>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="assets/js/keys.js"></script>
+    <script type="text/javascript" src="assets/js/helpers.js"></script>
+    <script type="text/javascript" src="assets/js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "oauth2-example-with-oauth2-server",
+  "version": "1.0.0",
+  "description": "An oAuth2.0 example with oAuth2-server in node.js",
+  "main": "server.js",
+  "scripts": {
+    "startDev": "nodemon server.js"
+  },
+  "keywords": [
+    "Node.js",
+    "oAuth2.0",
+    "oAuth2-server",
+    "JavaScript"
+  ],
+  "author": "Mojib Mohammad",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-oauth2-server": "^2.4.0",
+    "nodemon": "^2.0.12",
+    "pg": "^8.7.1"
+  }
+}

@@ -1,0 +1,54 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _ErrorHandler = require('../utils/ErrorHandler');
+
+var getOrientation = function getOrientation() {
+    if (!this.isMobile) {
+        throw new _ErrorHandler.CommandError('getOrientation command is not supported on non mobile platforms');
+    }
+
+    return this.unify(this.orientation(), {
+        lowercase: true,
+        extractValue: true
+    });
+}; /**
+    *
+    * Get the current browser orientation.
+    *
+    * <example>
+       :getOrientation.js
+       var client = require('webdriverio').remote({
+           desiredCapabilities: {
+               browserName: 'safari',
+               platform: 'OS X 10.9',
+               deviceName: 'iPad',
+               device: 'iPad Simulator',
+               platformVersion: '7.1',
+               platformName: 'iOS',
+               app: 'safari',
+               'device-orientation': 'landscape'
+           }
+       })
+   
+       client
+           .init()
+           .getOrientation().then(function(orientation) {
+               console.log(orientation); // outputs: "landscape"
+           })
+           .end();
+    * </example>
+    *
+    * @alias browser.getOrientation
+    * @returns {String} device orientation (`landscape/portrait`)
+    * @uses protocol/orientation
+    * @for android, ios
+    * @type mobile
+    *
+    */
+
+exports.default = getOrientation;
+module.exports = exports['default'];

@@ -1,0 +1,106 @@
+---
+# file.yml
+# The following is a yaml array of strings type
+YAML:
+  - A human-readable data serialization language # This is a comment
+  - https://en.wikipedia.org/wiki/YAML
+# This too
+yaml: # This is a comment too
+  - A complete JavaScript implementation
+  - https://www.npmjs.com/package/yaml
+# Numeric types
+integer: 12345 # Integer
+Hexidecimal: 0x12d4 # Hexidecimal
+decimal: 023332 # decimal
+# YAML supports both fixed and exponential floating point numbers
+fixed: 1230.15
+exponential: 12.3015e+05
+# We can represent not-a-number (NaN) or infinity
+foo: .inf
+bar: -.inf
+plop: .NaN
+# Strings
+strings: This is a string type in yaml
+# If we need to escap sequences we need to use double quotes
+sequenceEscaped: "this is not a normal string\n"
+notNormal: This is not a normal string\n
+# Multiline strings with the fold character (>)
+multiLineString: >
+  This is a multiline
+  string 
+  that will evaluate to one
+  string.
+# The block (pipe) | character has similar function but yaml interprets it as is
+multiline: |
+  this is not a normal string it
+  spans more than
+  one line
+  see?
+# Null values you can enter null values with a tild or the unquoted null string leteral
+nullWithTild: ~
+nullLiteral: null
+# Booleans
+booleanTrue: True
+booleanFalse: False
+light: On
+TV: Off
+# Arrays
+items: [1, 2, 3, 4, 5]
+names: ["one", "two", "three", "four"]
+# Or you can put arrays on multiple lines
+items1:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+names1:
+  - "one"
+  - "two"
+  - "three"
+  - "four"
+# The multiple line format is useful for lists that contain complex objects instead of scalars.
+# An Array can contain any valid YAML value. The values in a list do not have to be the same type.
+items2:
+  - things:
+      thing1: huey
+      thing2: dewey
+      thing3: louie
+  - other things:
+      key: value
+# Dictionaries
+dictionary: { name: Mojib, age: 31, country: Afghanistan }
+multipleLineDic:
+  name: Mojib
+  age: 31
+  country: Afghanistan
+NestedDic:
+  insideOuterOne:
+    thing1: thing1
+    thing2: thing2
+    thing3:
+      thing1: thing1
+      thing2: thing2
+# Advanced Options
+# Multiline values may end with whitespace, and depending on how you want the document to be processed you might not want to preserve it. YAML has the strip chomp and preserve chomp operators. To save the last character, add a plus to the fold or block operators.
+multilineValues: >+
+  this is not a normal string it
+  spans more than
+  one line
+  see?
+# So, if the value ends with whitespace, like a newline, YAML will preserve it. To strip the character, use the strip operator.
+stripOperator: |-
+  this is not a normal string it
+  spans more than
+  one line
+  see?
+
+
+# Multiple documents
+# A document starts with three dashes and ends with three periods. Some YAML processors require the document start operator. The end operator is usually optional. For example, Java's Jackson will not process a YAML document without the start, but Python's PyYAML will. You'll usually use the end document operator when a file contains multiple documents. Let's modify our python code.
+---
+foo: bar
+bar: foo
+---
+one: two
+three: four

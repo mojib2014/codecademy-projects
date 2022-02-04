@@ -1,0 +1,214 @@
+:root {
+  --main-red: #d64161;
+  --main-yellow: #feb236;
+  --main-white: #fff;
+  --main-orange: #ff7b25;
+}
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  /* Set font size for easy rem calculations
+       * default document font size = 16px, 1rem = 16px, 100% = 16px
+       * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+      */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* Base Styles */
+body {
+  background-color: var(--main-yellow);
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1 {
+  /* font-family: ; */
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+#venues,
+#weather {
+  margin: 5rem 0;
+}
+
+.venues-div,
+.weather-section {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Header */
+#header {
+  background-color: var(--main-red);
+  color: var(--main-white);
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header-title {
+  padding-left: 5rem;
+}
+
+/* Main Content */
+#main-wrapper {
+  max-width: 900px;
+  width: 100%;
+  padding-top: 10rem;
+  margin-bottom: 3rem;
+  margin: auto;
+}
+
+/* Error */
+.alert {
+  background-color: var(--main-red);
+  max-width: 400px;
+  width: 100%;
+  margin: 3rem auto;
+}
+
+.error {
+  padding: 2rem;
+}
+
+/* Weather */
+#weather {
+  flex-direction: column;
+}
+
+.city-name {
+  margin-bottom: 2rem;
+}
+
+.weather-div {
+  background-color: var(--main-white);
+  border-radius: 5px;
+  flex-basis: 50%;
+  padding: 1rem;
+  margin: auto;
+}
+
+/* Weather Form */
+form {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.form-group {
+  flex-basis: 60%;
+}
+
+.submit {
+  flex-basis: 20%;
+}
+
+#city {
+  background-color: var(--main-white);
+  border-radius: 5px;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+#submit {
+  background-color: var(--main-red);
+  border: 1px solid var(--main-red);
+  border-radius: 5px;
+  color: var(--main-white);
+  cursor: pointer;
+  width: 100%;
+  padding: 1rem 4rem;
+  margin-left: 1rem;
+}
+
+#submit:hover {
+  background-color: var(--main-orange);
+  border: 1px solid var(--main-orange);
+  color: #222;
+}
+
+span {
+  color: gray;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 28em) {
+  #weather {
+    flex-direction: row;
+    text-align: center;
+  }
+  .weather-div {
+    flex-basis: 85%;
+  }
+  form > div {
+    margin: 2rem 0;
+  }
+
+  .form-group {
+    flex-basis: 100%;
+  }
+
+  .submit {
+    flex-basis: 100%;
+  }
+
+  #submit {
+    margin-left: 0;
+  }
+}
+
+/* Venue */
+.venues-section-title {
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  background-color: var(--main-white);
+  border-radius: 5px;
+  flex: 40%;
+  margin: 2rem;
+  padding: 2rem;
+}

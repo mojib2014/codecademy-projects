@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>
+      This example requires you to enter commands in your browser's JavaScript
+      console (see
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools"
+        >What are browser developer tools</a
+      >
+      for more information).
+    </p>
+  </body>
+
+  <script>
+    function Person(first, last, age, gender, interestes) {
+      this.name = {
+        first,
+        last,
+      };
+      this.age = age;
+      this.gender = gender;
+      this.interestes = interestes;
+      this.bio = function () {
+        const gender = this.gender.toLowerCase();
+        let result;
+        switch (true) {
+          case gender === "male":
+            result = "He";
+            break;
+          case gender === "female":
+            result = "She";
+            break;
+          default:
+            return "Please enter a valid string.";
+            break;
+        }
+        alert(
+          `${this.name.first} ${this.name.last} is ${this.age} years old, ${result} likes ${this.interestes[0]} and ${this.interestes[1]}.`,
+        );
+      };
+      this.greeting = function () {
+        alert("Hello, I' " + this.name.first + ".");
+      };
+    }
+    const randomNumbers = [375, 200, 3.14, 7, 13, 852];
+    const smallNums = randomNumbers.map((randomNumber) =>
+      randomNumber < 50 ? randomNumber : null,
+    );
+    console.log("randomNumbers", randomNumbers);
+    console.log("smallNums", smallNums);
+  </script>
+</html>

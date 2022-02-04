@@ -1,0 +1,175 @@
+/* Global Styles */
+
+body {
+  color: seashell;
+  background-color: black;
+  font-family: Helvetica, sans-serif;
+  font-size: 22px;
+  text-align: center;
+  margin: 0;
+  opacity: 0.9;
+}
+
+a {
+  color: seashell;
+}
+
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 10px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Header */
+header {
+  background-color: black;
+  border-bottom: 1px solid seashell;
+  position: fixed;
+  width: 100%;
+  height: 69px;
+  text-transform: capitalize;
+  z-index: 100;
+}
+
+header .center {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  padding-left: 10px;
+}
+
+nav {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 10px;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav ul li {
+  padding-left: 2rem;
+  text-decoration: underline;
+}
+
+/* Main Section */
+
+.main {
+  position: relative;
+  top: 69px;
+  width: 100%;
+  margin: auto;
+  opacity: 0.9;
+}
+
+/* Mission Section */
+
+#mission {
+  background-image: url(/assets/images/img-mission-background.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1200px;
+  height: 700px;
+  margin: auto;
+}
+
+#mission .content {
+  background-color: black;
+  width: 100%;
+  margin: auto;
+}
+
+/* Store Section */
+
+#store {
+  width: 1000px;
+  height: 700px;
+  margin: auto;
+  padding-top: 70px;
+}
+
+.item {
+  padding: 10px;
+}
+
+.item img {
+  width: 300px;
+  height: 200px;
+  display: block;
+}
+
+.item span {
+  display: block;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Locations Section */
+
+#locations {
+  background-image: url(/assets/images/img-locations-background.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1200px;
+  height: 500px;
+  margin: auto;
+  opacity: 0.9;
+  padding-top: 70px;
+}
+
+.flex-container.locations {
+  width: 100%;
+  height: 100%;
+  padding-top: 5px;
+}
+
+.location {
+  background-color: black;
+  display: flex;
+  flex-basis: 280px;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  margin: 5px 20px;
+  opacity: 1;
+  padding: 10px;
+}
+
+/* Contact Section */
+#contact {
+  width: 100%;
+  height: 200px;
+  padding-top: 70px;
+}
+
+/* Footer Section */
+
+footer {
+  color: gray;
+  text-align: left;
+  padding-left: 20px;
+}
